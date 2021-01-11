@@ -7,12 +7,10 @@
    <version>0.4.0</version>
 
    <description>Cancer Deep Phenotype Extraction (DeepPhe) Project viz tool neo4j functions</description>
-   <properties>
-      <neo4j.version>3.5.20</neo4j.version>
-   </properties>
+  
    <repositories>     
       <repository>
-          <id>neo4j</id>
+          <id>neo</id>
           <name>Github Packages</name>
           <url>https://maven.pkg.github.com/DeepPhe/dphe-neo4j</url>
       </repository>
@@ -20,12 +18,11 @@
 
    <dependencies>
       <!--  neo4j for ontology graph  -->
-      <dependency>
+     <dependency>
          <groupId>org.healthnlp</groupId>
          <artifactId>deepphe-neo4j</artifactId>
          <version>0.4.0</version>
-      </dependency>
-
+     </dependency>
    </dependencies>
 
    <build>
