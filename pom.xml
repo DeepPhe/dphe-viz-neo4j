@@ -10,13 +10,15 @@
    <properties>
       <neo4j.version>3.5.20</neo4j.version>
    </properties>
-   <dependencies>
-      <dependency>
-         <groupId>org.neo4j</groupId>
-         <artifactId>neo4j</artifactId>
-         <version>${neo4j.version}</version>
-      </dependency>
+   <repositories>     
+      <repository>
+          <id>neo4j</id>
+          <name>Github Packages</name>
+          <url>https://maven.pkg.github.com/DeepPhe/dphe-neo4j</url>
+      </repository>
+   </repositories>
 
+   <dependencies>
       <!--  neo4j for ontology graph  -->
       <dependency>
          <groupId>org.healthnlp</groupId>
@@ -62,5 +64,13 @@
          </plugin>
       </plugins>
    </build>
+         
+   <distributionManagement>
+      <repository>
+         <id>github</id>
+         <name>DeepPhe-Robot</name>
+         <url>https://maven.pkg.github.com/DeepPhe/dphe-neo4j-viz</url>
+      </repository>
+   </distributionManagement>
 
 </project>
