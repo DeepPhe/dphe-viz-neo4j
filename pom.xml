@@ -73,7 +73,7 @@
              <configuration>
                <artifacts>
                  <artifact>
-                   <file>target/deepphe-viz-${project.version}</file>
+                   <file>target/deepphe-viz-${project.version}.zip</file>
                    <type>zip</type>
                  </artifact>
                </artifacts>
