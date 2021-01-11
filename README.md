@@ -1,10 +1,10 @@
-# deepphe-viz-neo4j v0.3.0
+# deepphe-viz-neo4j v0.4.0
 
 The `DeepPhe` system extracts information from the patient cancer reports and stores the data in Neo4j graph database. The `DeepPhe-Viz` tool represents the extracted information in an organized workflow to end users, enabling exploration and discovery of patient data. This `deepphe-viz-neo4j` module creates extended Neo4j functions as plugin jars that are being used by the `DeepPhe-Viz` to query the Neo4j database.
 
 ## Installing
 
-To build the plugin jars, you'll just do `mvn clean package` in the root directory of the DeepPhe system. You'll have a file named `deepphe-viz-0.3.0-plugin.zip` in the directory `deepphe-viz-neo4j/target` after building. This compressed file contains a directory named `plugins`. All the jar files of the plugins directory must be copied to <NEO4J_HOME>/plugins directory. Then the `DeepPhe-Viz` uses these libraries to interact with the customized DeepPhe system database.
+To build the plugin jars, you'll just do `mvn clean package` in the root directory of the DeepPhe system. You'll have a file named `deepphe-viz-0.4.0-plugin.zip` in the directory `deepphe-viz-neo4j/target` after building. This compressed file contains a directory named `plugins`. All the jar files of the plugins directory must be copied to <NEO4J_HOME>/plugins directory. Then the `DeepPhe-Viz` uses these libraries to interact with the customized DeepPhe system database.
 
 ## Neo4j Functions API Reference
 
