@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>org.healthnlp</groupId>
+   <artifactId>deepphe-viz-neo4j</artifactId>
+   <name>deepphe-viz-neo4j</name>
+   <version>0.4.0</version>
+
+   <description>Cancer Deep Phenotype Extraction (DeepPhe) Project viz tool neo4j functions</description>
+   <properties>
+      <neo4j.version>3.5.20</neo4j.version>
+   </properties>
+   <dependencies>
+      <dependency>
+         <groupId>org.neo4j</groupId>
+         <artifactId>neo4j</artifactId>
+         <version>${neo4j.version}</version>
+      </dependency>
+
+      <!--  neo4j for ontology graph  -->
+      <dependency>
+         <groupId>org.healthnlp</groupId>
+         <artifactId>deepphe-neo4j</artifactId>
+         <version>0.4.0</version>
+      </dependency>
+
+   </dependencies>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+            <configuration>
+               <source>1.8</source>
+               <target>1.8</target>
+            </configuration>
+         </plugin>
+         <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>2.4</version>
+            <executions>
+               <execution>
+                  <id>bundle-project-sources</id>
+                  <phase>package</phase>
+                  <goals>
+                     <goal>single</goal>
+                  </goals>
+                  <configuration>
+                     <descriptors>
+                        <descriptor>src/main/assembly/plugin.xml</descriptor>
+                     </descriptors>
+                     <!-- Tar package is only compatible with gnu tar, many files have more
+                         than 100 chars. Right now only javadoc files are too long. -->
+                     <tarLongFileMode>gnu</tarLongFileMode>
+
+                     <finalName>deepphe-viz-${project.version}</finalName>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
+
+</project>
